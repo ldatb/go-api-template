@@ -1,0 +1,19 @@
+services:
+  database:
+    image: mysql:8.4.2
+    container_name: mysql
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_USER=shieldwall_user
+      - MYSQL_PASSWORD=testpass
+      - MYSQL_ROOT_PASSWORD=testpass
+      - MYSQL_DATABASE=shieldwall_db
+    volumes:
+      - db-vol:/var/lib/mysql
+volumes:
+  db-vol:

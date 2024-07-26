@@ -1,0 +1,14 @@
+[general]
+api_address = "api_address"
+api_port = 8080
+log_file = "log_file"
+log_level = "log_level"
+
+[database]
+db_name = "db_name"
+db_user = "db_user"
+db_password = "db_password"
+db_address = "db_address"
+db_port = 3306
+db_max_idle_conns = 10
+db_max_open_conns = 100
